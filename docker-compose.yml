@@ -1,0 +1,17 @@
+version: "3"
+services:
+        rv1126:
+                image: rv1126
+                container_name: rv1126
+                hostname: rv1126
+                #iports:
+                #        - 80:80
+                #        - 443:443
+                volumes:
+                        - /home/gavinliang/work:/home/work
+
+                entrypoint: tail -f /etc/passwd
+
+                build:
+                        context: .
+                        dockerfile: Dockerfile
